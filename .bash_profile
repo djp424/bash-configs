@@ -26,7 +26,7 @@ alias d=docker
 alias gcheck='git checkout -b'
 alias gs='git status -s'
 alias ga='git add .'
-alias gc='git commit -a'
+alias gc='git commit -am'
 alias gp='git push origin HEAD'
 alias gd='git difftool'
 
