@@ -1,29 +1,42 @@
-# Paths
+# Setup
 #========
 
+# Paths
 export PATH="$PATH:~/.composer/vendor/bin"
 export PATH="$PATH:~/wpcs/vendor/bin"
 export MAMP_PHP=/Applications/MAMP/bin/php/php5.6.10/bin
 export PATH="$MAMP_PHP:$PATH"
 
+# Settings
+export EDITOR=vim
+
 # Aliases
 #========
 
-# Typing Errors
+# Spelling Mistakes
 alias sl=ls
 alias mdkir=mkdir
 
-# Short things are better
+# Short Versions
 alias v=vagrant
 alias g=git
 alias d=docker
 
 # Git Shortcuts
-alias gs='git show --pretty=oneline'
-alias gpush='git push origin master'
-alias gpushd='git push origin development'
+alias gcheck='git checkout -b'
+alias gs='git status -s'
+alias ga='git add .'
+alias gc='git commit -a'
+alias gp='git push origin HEAD'
+alias gd='git difftool'
+
+alias gshow='git show --pretty=oneline'
+alias gl='git log --graph --oneline --decorate --all'
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
+
 alias greset='git reset --hard origin/master'
-alias gpull='git pull origin master'
+alias gpushom='git push origin master'
+alias gpullom='git pull origin master'
 
 # Stored Regular Expressions
 alias reg_mac='echo [0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}'
@@ -35,7 +48,6 @@ alias reg_ip='echo "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"'
 alias alphabet='echo a b c d e f g h i j k l m n o p q r s t u v w x y z'
 alias unicode='echo ✓ ™  ♪ ♫ ☃ ° Ɵ ∫'
 alias numalphabet='alphabet; echo 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6'
-alias ascii='man ascii | grep -m 1 -A 63 --color=never Oct'
 
 # 3rd Party
 alias weather='curl -4 http://wttr.in/New_York'
