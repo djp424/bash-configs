@@ -20,11 +20,10 @@ alias d=docker
 
 # Git Shortcuts
 alias gs='git show --pretty=oneline'
-alias gpom='git push origin master'
-alias gpod='git push origin development'
-alias grom='git reset --hard origin/master'
-alias gp='git pull'
-alias gpom='git pull origin master'
+alias gpush='git push origin master'
+alias gpushd='git push origin development'
+alias greset='git reset --hard origin/master'
+alias gpull='git pull origin master'
 
 # Stored Regular Expressions
 alias reg_mac='echo [0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}'
