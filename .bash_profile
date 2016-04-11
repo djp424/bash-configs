@@ -28,7 +28,7 @@ alias vh='vagrant halt'
 
 # Git Shortcuts
 alias gcheck='git checkout -b'
-alias gs='git status -s'
+alias gs='git status'
 alias ga='git add .'
 alias gp='git push origin HEAD'
 alias gd='git difftool'
