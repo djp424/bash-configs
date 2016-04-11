@@ -22,6 +22,10 @@ alias v=vagrant
 alias g=git
 alias d=docker
 
+# Vagrant
+alias vu='vagrant up'
+alias vh='vagrant halt'
+
 # Git Shortcuts
 alias gcheck='git checkout -b'
 alias gs='git status -s'
@@ -83,3 +87,10 @@ function pr() {
   git fetch origin pull/${id}/head:pr_${id}
   git checkout pr_${id}
 }
+
+# Custom
+#==========
+
+if [ -f "$HOME/.bash_custom" ]; then
+	source "$HOME/.bash_custom"
+fi
