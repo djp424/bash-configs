@@ -26,7 +26,6 @@ alias d=docker
 alias gcheck='git checkout -b'
 alias gs='git status -s'
 alias ga='git add .'
-alias gc='git commit -am'
 alias gp='git push origin HEAD'
 alias gd='git difftool'
 
@@ -55,11 +54,21 @@ alias weather='curl -4 http://wttr.in/New_York'
 # Functions
 #==========
 
+# Git commit without quotes
+function gc() {
+  message=$*
+  if [ -z "$message" ]; then
+    echo "Add a message"
+    return 1
+  fi
+  git commit -am "$message"
+}
+
 # Get to the top of a git tree
-cdp () {
+cdp() {
   TEMP_PWD=`pwd`
   while ! [ -d .git ]; do
-  cd ..
+    cd ..
   done
   OLDPWD=$TEMP_PWD
 }
@@ -68,8 +77,8 @@ cdp () {
 function pr() {
   id=$1
   if [ -z $id ]; then
-      echo "Need Pull request number as argument"
-      return 1
+    echo "Need Pull request number as argument"
+    return 1
   fi
   git fetch origin pull/${id}/head:pr_${id}
   git checkout pr_${id}
