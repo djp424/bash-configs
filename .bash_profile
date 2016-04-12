@@ -69,7 +69,7 @@ function gc() {
 }
 
 # Get to the top of a git tree
-cdp() {
+function cdp() {
   TEMP_PWD=`pwd`
   while ! [ -d .git ]; do
     cd ..
@@ -86,6 +86,14 @@ function pr() {
   fi
   git fetch origin pull/${id}/head:pr_${id}
   git checkout pr_${id}
+}
+
+# Grab single file from git project.
+function gsingle() {
+	url=$1
+	temp="git archive --remote='${url}' HEAD:<path/to/directory/or/file> <filename> | tar -x"
+	echo temp
+	git archive --remote=${url} HEAD:<path/to/directory/or/file> <filename> | tar -x
 }
 
 # Custom
