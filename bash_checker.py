@@ -6,7 +6,7 @@ script, input_file = argv
 input_file           = open( input_file )
 alias_array_forwards = []
 alias_array_bakwards = []
-tests_passed         = 1
+tests_passed         = True
 
 # Build list of commands.
 while True:
@@ -20,7 +20,7 @@ while True:
 		command   = line[0].replace( "alias ", "" )
 
 		# Only check commands that are 2 chars long.
-		if len( command ) is 2:
+		if len( command ) == 2:
 			alias_array_forwards.append( command )
 			alias_array_bakwards.append( command[::-1] )
 
@@ -29,7 +29,7 @@ for command in alias_array_forwards:
 	if command in alias_array_bakwards and command != command[::-1]:
 		print "%s: Fail! Consider renaming this command." % command
 		print "          This could accedently be typed as %s" % command[::-1]
-		tests_passed = 0
+		tests_passed = False
 	else:
 		print "%s: Pass!" % command
 
