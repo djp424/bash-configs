@@ -31,8 +31,10 @@ alias d=docker
 
 # Vagrant
 alias up='vagrant up'
+alias start=up
 alias halt='vagrant halt'
 alias down=halt
+alias stop=halt
 
 # Git Shortcuts
 alias gs='git status'
