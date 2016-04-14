@@ -15,14 +15,18 @@ while True:
 
 	if not line: break
 
-	if "alias" in line:
-		line      = line.split( '=' )
-		command   = line[0].replace( "alias ", "" )
+	# Make sure alias is in line.
+	if "alias " in line:
+		line = line.split('=')
 
-		# Only check commands that are 2 chars long.
-		if len( command ) == 2:
-			alias_array_forwards.append( command )
-			alias_array_bakwards.append( command[::-1] )
+		# Make sure alias is in first part of line.
+		if "alias " in line[0]:
+			command = line[0].replace("alias ", "")
+
+			# Check characters with 2 letter length.
+			if len( command ) == 2:
+				alias_array_forwards.append(command)
+				alias_array_bakwards.append(command[::-1])
 
 # Compare lists.
 for command in alias_array_forwards:
