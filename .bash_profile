@@ -30,15 +30,18 @@ alias g=git
 alias d=docker
 
 # Vagrant
-alias vu='vagrant up'
-alias vh='vagrant halt'
+alias up='vagrant up'
+alias halt='vagrant halt'
+alias down=halt
 
 # Git Shortcuts
-alias gcheck='git checkout -b'
 alias gs='git status'
 alias ga='git add .'
 alias gp='git push origin HEAD'
+alias gn='git checkout -b'
+alias gnew=gn
 alias gd='git difftool'
+alias gdiff=gd
 
 alias gshow='git show --pretty=oneline'
 alias gl='git log --graph --oneline --decorate --all'
