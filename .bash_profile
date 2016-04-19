@@ -44,6 +44,8 @@ alias gn='git checkout -b'
 alias gnew=gn
 alias gd='git difftool'
 alias gdiff=gd
+alias gm='git checkout master'
+alias gmaster='git checkout master'
 
 alias gshow='git show --pretty=oneline'
 alias gl='git log --graph --oneline --decorate --all'
