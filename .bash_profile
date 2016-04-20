@@ -72,6 +72,18 @@ alias weather='curl -4 http://wttr.in/New_York'
 # Functions
 #==========
 
+# Traverse up as many levels as needed
+function up() {
+  if (( $# == 1 )); then
+    for ((i=0; i<$1; i++))
+    do
+      cd ..
+    done
+  else
+    cd ..
+  fi
+}
+
 # Git commit without quotes
 function gc() {
   message=$*
