@@ -73,7 +73,7 @@ alias weather='curl -4 http://wttr.in/New_York'
 #==========
 
 # Traverse up as many levels as needed
-function up() {
+function goup() {
   if (( $# == 1 )); then
     for ((i=0; i<$1; i++))
     do
